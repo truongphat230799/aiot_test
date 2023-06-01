@@ -108,16 +108,17 @@ Blockly.Blocks['create_tinyrgbled'] = {
 };
 
 Blockly.Python['create_tinyrgbled'] = function(block) {
-  Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
+  Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';  
+  Blockly.Python.definitions_['import_led_tiny'] = 'from tiny_rgbled import RGBLed';
   var dropdown_name = block.getFieldValue('NAME');
   // TODO: Assemble Python into code variable.
-  var code = 'tiny_rgb' + dropdown_name + ' = RGBLed(' +dropdown_name+', 4)\n';
+  var code = 'tiny_rgb_' + dropdown_name + ' = RGBLed(' +dropdown_name+', 4)\n';
   return code;
 };
 
 // Tiny LED Module
 
-Blockly.Blocks["aiot_led_tiny_set_all"] = {
+Blockly.Blocks["led_tiny_set_all"] = {
   init: function () {
     this.jsonInit({
       inputsInline: true,
@@ -239,14 +240,13 @@ Blockly.Blocks["aiot_led_tiny_set_all"] = {
   }
 };
 
-Blockly.Python['aiot_led_tiny_set_all'] = function(block) {
+Blockly.Python['led_tiny_set_all'] = function(block) {
   var port = block.getFieldValue('port');
   var option = block.getFieldValue('option');
   var color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
-  Blockly.Python.definitions_['import_led_tiny'] = 'from aiot_rgbled import RGBLed';
-  Blockly.Python.definitions_['import_led_tiny_init'] = 'tiny_rgb = RGBLed('+ port +'.pin, 4)';
+  Blockly.Python.definitions_['import_led_tiny'] = 'from tiny_rgbled import RGBLed';
   // TODO: Assemble Python into code variable.
-  var code = "tiny_rgb.show("+ option +", hex_to_rgb("+ color +"))\n";
+  var code = "tiny_rgb_"+port+".show("+ option +", hex_to_rgb("+ color +"))\n";
   return code;
 };

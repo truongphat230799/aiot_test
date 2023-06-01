@@ -917,9 +917,9 @@ Blockly.Python['aiot_led_tiny_set_all'] = function(block) {
   var color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
   Blockly.Python.definitions_['import_led_tiny'] = 'from aiot_rgbled import RGBLed';
-  Blockly.Python.definitions_['import_led_tiny_init'] = 'tiny_rgb = RGBLed('+ port +'.pin, 4)';
+  Blockly.Python.definitions_['import_led_tiny_init'] = 'tiny_rgb'+port+' = RGBLed('+ port +'.pin, 4)';
   // TODO: Assemble Python into code variable.
-  var code = "tiny_rgb.show("+ option +", hex_to_rgb("+ color +"))\n";
+  var code = "tiny_rgb"+port+".show("+ option +", hex_to_rgb("+ color +"))\n";
   return code;
 };
 

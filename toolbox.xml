@@ -1,0 +1,66 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="AIOT KIT" colour="#44cbc6" icon="share-alt">
+    <block type="aiot_dht_measure"/>
+    <block type="aiot_dht_read"/>
+
+    <block type="aiot_detect_motion"/>
+
+    <block type="aiot_light_sensor"/>
+
+    <block type="aiot_soil_sensor"/>
+
+    <block type="aiot_ultrasonic_create"/>
+    <block type="aiot_ultrasonic_read"/>
+    <block type="aiot_ultrasonic_checkdistance">
+      <value name="DISTANCE">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+
+    <block type="aiot_lcd1602_backlight"/>
+    <block type="aiot_lcd1602_display">
+      <value name="string">
+        <shadow type="text">
+          <field name="TEXT">Hello</field>
+        </shadow>
+      </value>
+      <value name="X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="aiot_lcd1602_clear"/>
+
+    <block type="aiot_minifan">
+      <value name="percent"><shadow type="math_number"><field name="NUM">70</field></shadow></value>
+    </block>
+
+    <block type="aiot_dual_usb">
+      <value name="percent"><shadow type="math_number"><field name="NUM">70</field></shadow></value>
+    </block>
+
+    <block type="aiot_relay"/>
+
+    <block type="aiot_led_tiny_set_all">
+      <value name="COLOR">
+        <shadow type="colour_picker">
+          <field name="COLOUR">#ff0000</field>
+        </shadow>
+      </value>
+    </block>
+
+    <block type="aiot_ir_on_receive"/>
+    <block type="aiot_ir_remote_btn"/>
+    <block type="aiot_ir_recv"/>
+    <block type="aiot_ir_clear"/>
+    
+  </category>
+</xml>

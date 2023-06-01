@@ -1,0 +1,16 @@
+{
+    "name": "AIOT Kit",
+    "description": "Mục mở rộng dành cho bộ kit AIoT",
+    "libs": [
+        "aiot_dht20.py", "aiot_lcd1602.py", "aiot_ir_receiver.py", "aiot_rgbled.py", "aiot_hcsr04.py"
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "languages": {
+        "en": "languages/en.js",
+        "vi": "languages/vi.js"
+    },
+    "poster": "aiot.png"
+}

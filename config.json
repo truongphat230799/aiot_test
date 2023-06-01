@@ -1,6 +1,6 @@
 {
-    "name": "AIOT Kit",
-    "description": "Mục mở rộng dành cho bộ kit AIoT",
+    "name": "TINY RGB",
+    "description": "Mục mở rộng dành cho đèn 4 led RGB",
     "libs": [
         "tiny_rgbled.py"
     ],

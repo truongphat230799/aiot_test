@@ -112,7 +112,7 @@ Blockly.Python['create_tinyrgbled'] = function(block) {
   Blockly.Python.definitions_['import_led_tiny'] = 'from tiny_rgbled import RGBLed';
   var dropdown_name = block.getFieldValue('NAME');
   // TODO: Assemble Python into code variable.
-  var code = 'tiny_rgb_' + dropdown_name + ' = RGBLed(' +dropdown_name+', 4)\n';
+  var code = 'tiny_rgb_' + dropdown_name + ' = RGBLed(' +dropdown_name+'.pin, 4)\n';
   return code;
 };
 

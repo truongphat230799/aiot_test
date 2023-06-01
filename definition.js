@@ -222,15 +222,7 @@ Blockly.Blocks["led_tiny_set_all"] = {
           ],
         },
         { type: "input_value", name: "COLOR" },
-        {type: "input_dummy"},
-        {
-          "type": "field_image",
-          "src": ImgUrl + 'rgb.png',
-          "width": 20,
-          "height": 20,
-          "alt": "*",
-          "flipRtl": false
-        }
+        {type: "input_dummy"}        
       ],
       helpUrl: ""
     });

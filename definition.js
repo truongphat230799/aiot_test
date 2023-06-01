@@ -125,7 +125,7 @@ Blockly.Blocks["led_tiny_set_all"] = {
       colour: ColorBlock,
       nextStatement: null,
       tooltip: "",
-      message0: "%5 LED RGB chân %1 đổi màu led %2 thành %3 %4",
+      message0: "LED RGB chân %1 đổi màu led %2 thành %3 %4",
       previousStatement: null,
       args0: [
         {
